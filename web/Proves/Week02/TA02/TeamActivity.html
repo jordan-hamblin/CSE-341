@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Team Activity</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+   <h1>Team Activity</h1>
+   <div id="div1" class="hoverIt">
+    This is my first div...I don't know what to put in here.
+   </div>
+    
+   <div id="div2" class="hoverIt">
+    This is my secon div...I still don't know what to put in here.
+   </div>
+
+   <div id="div3" class="hoverIt">
+    This is my third div...I think that I am going to give up now.
+   </div>
+
+   <button onclick="clicked();">Click Me!</button>
+   
+   <input type="text" id="txtColor" placeholder="#cccccc">
+
+   <button onclick="change();">Change the color!</button>
+   <button id="background">Change the Background Color</button>
+   <button id="fade">Fade</button>
+</body>
+<script>
+    $(document).ready(function(){
+
+        $("#fade").click(function(){
+            $("#div3").fadeOut();
+    });
+
+}); 
+    $(document).ready(function(){
+
+        $("#background").click(function(){
+            $("*").css("background-color", $("#txtColor").val());
+    });
+
+});    
+</script>
+
+</html>
+
+
