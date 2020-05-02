@@ -27,12 +27,12 @@
                 the planet! Yes God certainly did bless the United States of America.<br>
             </p>
             <?php
-                echo "Today is " . date("Y/m/d") . "<br>";
+                echo "Today is " . date("Y/m/d") . "<br><br>";
             ?>
             <p>
-                This is the time to stand up for what you believe in!<br>
+                This is the time to stand up for what you believe in!<br><br>
                 "Multitudes, multitudes in the valley of decision: for 
-                the day of the Lord is near in the valley od decision"<br>
+                the day of the Lord is near in the valley of decision"<br>
                 -Joel 3:14
             </p>
         </div>
