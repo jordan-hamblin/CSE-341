@@ -11,7 +11,7 @@
 <body>
     <header>
         <ul>
-            <li><a href="hompepage.html">Homepage</a></li>
+            <li><a href="homepage.php">Homepage</a></li>
             <li><a href="index.html">Assignments</a></li>
         </ul>
         <div id="format">
