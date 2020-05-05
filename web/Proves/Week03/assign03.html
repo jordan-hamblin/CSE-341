@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assign03</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js"></script>
 </head>
 <body>
-    Coming Soon
+    <form id="form1" action="assign03.php" method="POST">
+        First Name: <input type="text" name="first_name" id="first" required><br>
+        Last Name: <input type="text" name="last" id="last_name" required><br>
+        Address: <input type="text" name="address" id="address" required><br>
+        Phone: <input type="text" name="phone" id="phone" onchange="phoneN(this)" required><span id="change1" style="color: red"></span><br>
+
+        Gun: <input type="checkbox" id="item1" name="items[]" value="Gun: $500" onchange="price()">
+        Bullets: <input type="checkbox" id="item2" name="items[]" value="Bullets: $50" onchange="price()">
+        Target: <input type="checkbox" id="item3" name="items[]" value="Target: 10" onchange="price()">
+        Tannerite: <input type="checkbox" id="item4" name="items[]" value="Tannerite: $20" onchange="price()">
+        Total: <input type="number" name="total" id="total" value="0" onchange="totl()" readonly><br>
+
+        Credit Card Type:<br>
+        Visa<input type="radio" name="card" id="visa" value="Visa">
+        MasterCard<input type="radio" name="card" id="mastercard" value="Mastercard">
+        American Express<input type="radio" name="card" id="american_express" value="American Express"><br>
+
+        Credit Card Number: <input type="text" name="credit_card" id="credit_card" onchange="cardN(this)" required>
+        <span id="change2" style="color: red"></span><br>
+
+        Credit Card Expiration Date: <input type="text" name="exp_date" id="exp_date" onchange="expir(this)" required>
+        <span id="change3" style="color: red"></span><br>
+
+        <input type="reset" name="reset" id="reset" value="Clear">
+        <input type="submit" id="submit" value="Submit" onclick="subm();">
+
+    </form>
 </body>
 </html>
