@@ -1,4 +1,3 @@
-//let formElement = document.getElementById("form1");
 
 window.onload = function(){
     document.getElementById("form1").addEventListener('submit', subm);
@@ -13,6 +12,7 @@ function subm(event){
     if (phoneN()) {
         formElement.submit();
     }
+
         }
 
 function phoneN(element){

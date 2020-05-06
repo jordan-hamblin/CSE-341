@@ -36,7 +36,7 @@
     <form id="form2" action="assign03_a.php" method="POST">
         Confirm Purchase<input type="submit" id="submit1" value="Submit"><br>
     </form>
-    <form id="form3" action="assign003_b.php" method="POST">
+    <form id="form3" action="assign03_b.php" method="POST">
         Confirm Purchase<input type="submit" id="submit2" value="Cancel"><br>
     </form>
 
