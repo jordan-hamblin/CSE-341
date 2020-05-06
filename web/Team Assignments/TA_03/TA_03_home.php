@@ -17,9 +17,7 @@
         Out<textarea>Comments(in)</textarea>
     </form>
     <?php
-    echo "Is this working;
-    
-    
-?>
+    echo "Is this working";
+    ?>
 </body>
 </html>
