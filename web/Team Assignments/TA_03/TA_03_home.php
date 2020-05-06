@@ -14,7 +14,8 @@
         WDD<input type="radio" name="major" id="wdd" value="wdd"><br>
         CIT<input type="radio" name="major" id="cit" value="cit"><br>
         CE<input type="radio" name="major" id="ce" value="ce"><br>
-        Out<textarea>Comments(in)</textarea>
+        Out<textarea></textarea>
+        <Input type="submit">
     </form>
     <?php
     echo "Is this working";
