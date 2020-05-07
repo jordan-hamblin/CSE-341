@@ -20,11 +20,12 @@
     echo "<p>Major: " . $major . "</p>";
     echo "<p>Your comment: " . $comment . "</p>";
     
-    echo "<p>Ordered Items: " . "</p>";
-     foreach ($items as $item){
-         echo "$item<br>";
-     }
+    echo "<p>Countries visited: " . "</p>";
     
+    foreach ($items as $item){
+        echo "$item<br>";          
+     }
+
 ?>
 
 </body>
