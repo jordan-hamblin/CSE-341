@@ -9,19 +9,21 @@
     <h1>Team Activity</h1>
 <?php
     $name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : "";
-    $email = isset($_POST['last']) ? htmlspecialchars($_POST['email']) : "";
+    $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : "";
     $major = isset($_POST['major']) ? htmlspecialchars($_POST['major']) : "";
+    $major = isset($_POST['comment']) ? htmlspecialchars($_POST['comment']) : "";
     
-    //$items = isset($_POST['items']) ? $_POST['items'] : Array();
+    $items = isset($_POST['items']) ? $_POST['items'] : Array();
 
     echo "<p>Name: " . $name . "</p>";
     echo "<p>Email: " . $email . "</p>";
     echo "<p>Major: " . $major . "</p>";
-    echo "<p>Phone Number: " . $phone . "</p>";
+    echo "<p>Your comment: " . $comment . "</p>";
+    
     echo "<p>Ordered Items: " . "</p>";
-    // foreach ($items as $item){
-    //     echo "$item<br>";
-    // }
+     foreach ($items as $item){
+         echo "$item<br>";
+     }
     
 ?>
 
