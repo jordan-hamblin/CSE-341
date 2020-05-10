@@ -21,10 +21,10 @@ session_start();
     </header>
 
    <form id="form1" action="assign03_a.php" method="GET">              
-        Gun: <input type="checkbox" id="item1" name="items[]" value="Gun: $500" onchange="price()">
-        Bullets: <input type="checkbox" id="item2" name="items[]" value="Bullets: $50" onchange="price()">
-        Target: <input type="checkbox" id="item3" name="items[]" value="Target: 10" onchange="price()">
-        Tannerite: <input type="checkbox" id="item4" name="items[]" value="Tannerite: $20" onchange="price()">
+        Gun: <input type="checkbox" id="item1" name="items[]" value="Gun: $500" onchange="price()"><br>
+        Bullets: <input type="checkbox" id="item2" name="items[]" value="Bullets: $50" onchange="price()"><br>
+        Target: <input type="checkbox" id="item3" name="items[]" value="Target: 10" onchange="price()"><br>
+        Tannerite: <input type="checkbox" id="item4" name="items[]" value="Tannerite: $20" onchange="price()"><br>
         Total: <input type="number" name="total" id="total" value="0" onchange="totl()" readonly><br>
 
         <input type="reset" name="reset" id="reset" value="Clear">
