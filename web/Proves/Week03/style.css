@@ -1,14 +1,34 @@
+/*Adapted from W3 Schools*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  }
+  ul img{
+    object-fit: cover;
+    width: 5%;
+    max-height: 5%;
+  }
 
-body {
-  background-size: 100% 100%;
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+a{
+  color: white;
 }
-h1{
-  text-align: center;
-   font-size: 60px;
-   color: black;
+
+a:hover {
+  background-color: grey;
 }
-form{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 
