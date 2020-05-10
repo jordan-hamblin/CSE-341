@@ -27,16 +27,13 @@ session_start();
         echo "<p>Ordered Items: " . "</p>";
         foreach ($_SESSION['finalItems'] as $item){
         echo "$item<br>";
+        }
         
         
         echo "<p>Address: " . $address . "</p>";
 ?>
         
-        <button type="button">Confirm</button>
+        <button type="button">Confirm</button> 
 </body>
 
 </html>
-
-
-
-

@@ -28,7 +28,7 @@ session_start();
         Total: <input type="number" name="total" id="total" value="0" onchange="totl()" readonly><br>
 
         <input type="reset" name="reset" id="reset" value="Clear">
-        <input type="submit" id="submit" value="Submit" onclick="subm();">
+        <input type="submit" id="submit" value="View Shopping Cart" onclick="subm();">
     </form>
 
 </body>
