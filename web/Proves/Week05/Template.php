@@ -59,3 +59,11 @@
 	?> 
 </body>
 </html>
+
+
+
+
+
+
+
+Select DISTINCT document_name from document WHERE upper(document_name) = upper('To do list');
