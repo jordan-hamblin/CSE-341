@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -23,7 +24,7 @@
 
     try {
             $statement = $db->prepare('Select DISTINCT document_name from document WHERE upper(document_name) = upper(:document)');
-            $statement->bindValue(':document', $document);
+            $statement->bindValue(':document', $document, PDO::PARAM_STR);
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             echo $row["document_name"];
