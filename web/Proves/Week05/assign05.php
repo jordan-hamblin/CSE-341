@@ -27,8 +27,9 @@
             $statement->bindValue(':document', $document, PDO::PARAM_STR);
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            echo $row["document_name"];
-            
+                echo "<p>";
+                echo $row["document_name"];
+                echo "</p>";
             }
         } catch (Exception $ex) {
             echo "$ex";

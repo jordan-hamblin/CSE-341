@@ -10,3 +10,9 @@ form{
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+p{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
