@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="java.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -17,7 +18,12 @@
             <option value="delete">Delete</option>
             <option value="insert">Insert</option>
         </select>
-		
+        
+        <div id="content">
+            <label for="document_content">Document Content:</label>
+            <textarea id="document_content" name="document_content" rows="4" cols="50">
+        </div>
+
         <input type="submit" value="Perform requested action" name="show_document">
 	</form>
 <?php
@@ -30,13 +36,14 @@
     if(isset($_POST['action']))
 	{
         $action = $_POST["action"];
-    }
+    }   
     
     require "db_connect.php";
     $db = get_db();
 
     try {
-            if ($action == "display"){
+            if ($action == "display")
+            {
                 $statement = $db->prepare('Select DISTINCT document_content from document WHERE upper(document_name) = upper(:document)');
                 $statement->bindValue(':document', $document, PDO::PARAM_STR);
                 $statement->execute();
@@ -47,7 +54,8 @@
                 }
             }
             
-            if ($action =="delete"){
+            if ($action =="delete")
+            {
                 $statement = $db->prepare('Delete from document WHERE upper(document_name) = upper(:document)');
                 $statement->bindValue(':document', $document, PDO::PARAM_STR);
                 $statement->execute();
@@ -56,8 +64,9 @@
                 echo "</p>";
             }
             
-            if ($action =="insert"){
-                $statement = $db->prepare('Select DISTINCT document_content from document WHERE upper(document_name) = upper(:document)');
+            if ($action =="insert")
+            { 
+                $statement = $db->prepare('INSERT INTO document (owner_id, document_name, document_content) Values (1, :document, 'jadsjdas')'); 
                 $statement->bindValue(':document', $document, PDO::PARAM_STR);
                 $statement->execute();
             }
