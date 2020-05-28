@@ -2,7 +2,7 @@
 
 
 window.onload = function(){
-    document.getElementById("action").addEventListener('onchange', show);
+    document.getElementById("action").addEventListener('change', show);
 }
 
 function show(event){
