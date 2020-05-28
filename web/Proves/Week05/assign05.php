@@ -66,7 +66,7 @@
             
             if ($action =="insert")
             { 
-                $statement = $db->prepare('INSERT INTO document (owner_id, document_name, document_content) Values (1, :document, 'jadsjdas')'); 
+                //$statement = $db->prepare('INSERT INTO document (owner_id, document_name, document_content) Values (1, :document, 'jadsjdas')'); 
                 $statement->bindValue(':document', $document, PDO::PARAM_STR);
                 $statement->execute();
             }
