@@ -13,9 +13,9 @@
         <label for="action">Choose an Action:</label>
 
         <select name="action" id="action">
-            <option value="display" name="display">Display</option>
-            <option value="delete" name="delete">Delete</option>
-            <option value="insert" name="insert">Insert</option>
+            <option value="display">Display</option>
+            <option value="delete">Delete</option>
+            <option value="insert">Insert</option>
         </select>
 		
         <input type="submit" value="Perform requested action" name="show_document">
@@ -46,6 +46,19 @@
                     echo "</p>";
                 }
             }
+            
+            if ($action =="delete"){
+                $statement = $db->prepare('Select DISTINCT document_content from document WHERE upper(document_name) = upper(:document)');
+                $statement->bindValue(':document', $document, PDO::PARAM_STR);
+                $statement->execute();
+            }
+            
+            if ($action =="insert"){
+                $statement = $db->prepare('Select DISTINCT document_content from document WHERE upper(document_name) = upper(:document)');
+                $statement->bindValue(':document', $document, PDO::PARAM_STR);
+                $statement->execute();
+            }
+
         } catch (Exception $ex) {
             echo "$ex";
         }
