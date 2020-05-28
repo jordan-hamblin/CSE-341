@@ -9,7 +9,7 @@
 </head>
 <body>
     <form method="POST"> 
-		Document Name<input type="text" id="document" name="document"><br /><br />
+		Document Name<input type="text" id="document" name="document"><br />
 
         <label for="action">Choose an Action:</label>
 
