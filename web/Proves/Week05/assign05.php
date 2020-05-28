@@ -27,10 +27,10 @@
         // $document += "%";
     }
     
-    if(isset($_POST['action']))
-	{
-        $document = $_POST["action"];
-    }
+    // if(isset($_POST['action']))
+	// {
+    //     $document = $_POST["action"];
+    // }
     
     require "db_connect.php";
     $db = get_db();
