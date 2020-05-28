@@ -19,10 +19,10 @@
             <option value="insert">Insert</option>
         </select>
         
-        <!-- <div id="content">
+        <div id="content">
             <label for="document_content">Document Content:</label>
             <textarea id="document_content" name="document_content" rows="4" cols="50">
-        </div> -->
+        </div>
 
         <input type="submit" value="Perform requested action" name="show_document">
 	</form>

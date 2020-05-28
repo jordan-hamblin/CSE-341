@@ -17,6 +17,6 @@ p{
     flex-direction: column;
 }
 
-#content {
+div {
   display: none;
 }
