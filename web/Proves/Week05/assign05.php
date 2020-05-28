@@ -29,7 +29,7 @@
     
     if(isset($_POST['action']))
 	{
-        $document = $_POST["action"];
+        $action = $_POST["action"];
     }
     
     require "db_connect.php";
