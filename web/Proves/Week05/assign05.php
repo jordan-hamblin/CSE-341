@@ -21,7 +21,7 @@
         
         <div id="content">
             <label for="document_content">Document Content:</label>
-            <textarea id="document_content" name="document_content" rows="4" cols="50">
+            <textarea id="document_content" name="document_content">
         </div>
 
         <input type="submit" value="Perform requested action" name="show_document">
