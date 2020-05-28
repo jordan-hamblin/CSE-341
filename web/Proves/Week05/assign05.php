@@ -36,12 +36,12 @@
     $db = get_db();
 
     try {
-            $statement = $db->prepare('Select DISTINCT document_name from document WHERE upper(document_name) = upper(:document)');
+            $statement = $db->prepare('Select DISTINCT document_content from document WHERE upper(document_name) = upper(:document)');
             $statement->bindValue(':document', $document, PDO::PARAM_STR);
             $statement->execute();
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 echo "<p>";
-                echo $row["document_name"];
+                echo $row["document_content"];
                 echo "</p>";
             }
         } catch (Exception $ex) {
