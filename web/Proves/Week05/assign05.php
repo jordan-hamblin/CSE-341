@@ -48,9 +48,12 @@
             }
             
             if ($action =="delete"){
-                $statement = $db->prepare('Select DISTINCT document_content from document WHERE upper(document_name) = upper(:document)');
+                $statement = $db->prepare('Delete from document WHERE upper(document_name) = upper(:document)');
                 $statement->bindValue(':document', $document, PDO::PARAM_STR);
                 $statement->execute();
+                echo "<p>";
+                echo "Document deleted";
+                echo "</p>";
             }
             
             if ($action =="insert"){
