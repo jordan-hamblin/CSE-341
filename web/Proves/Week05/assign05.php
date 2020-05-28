@@ -13,9 +13,9 @@
         <label for="action">Choose an Action:</label>
 
         <select name="action" id="action">
-            <option value="display">Display</option>
-            <option value="delete">Delete</option>
-            <option value="insert">Insert</option>
+            <option value="display" name="display">Display</option>
+            <option value="delete" name="delete">Delete</option>
+            <option value="insert" name="insert">Insert</option>
         </select>
 		
         <input type="submit" value="Perform requested action" name="show_document">
@@ -27,22 +27,24 @@
         // $document += "%";
     }
     
-    // if(isset($_POST['action']))
-	// {
-    //     $document = $_POST["action"];
-    // }
+    if(isset($_POST['action']))
+	{
+        $document = $_POST["action"];
+    }
     
     require "db_connect.php";
     $db = get_db();
 
     try {
-            $statement = $db->prepare('Select DISTINCT document_content from document WHERE upper(document_name) = upper(:document)');
-            $statement->bindValue(':document', $document, PDO::PARAM_STR);
-            $statement->execute();
-            while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                echo "<p>";
-                echo $row["document_content"];
-                echo "</p>";
+            if ($action == "display"){
+                $statement = $db->prepare('Select DISTINCT document_content from document WHERE upper(document_name) = upper(:document)');
+                $statement->bindValue(':document', $document, PDO::PARAM_STR);
+                $statement->execute();
+                while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<p>";
+                    echo $row["document_content"];
+                    echo "</p>";
+                }
             }
         } catch (Exception $ex) {
             echo "$ex";
