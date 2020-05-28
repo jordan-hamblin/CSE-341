@@ -20,7 +20,8 @@
         </select>
         
         <div id="content">
-            <textarea id="document_content" name="document_content">Document Content:</textarea>
+        Document Content:<br>
+            <textarea id="document_content" name="document_content"></textarea>
         </div>
 
         <input type="submit" value="Perform requested action" name="show_document">
