@@ -64,12 +64,12 @@
                 echo "</p>";
             }
             
-            if ($action =="insert")
-            { 
-                //$statement = $db->prepare('INSERT INTO document (owner_id, document_name, document_content) Values (1, :document, 'jadsjdas')'); 
-                $statement->bindValue(':document', $document, PDO::PARAM_STR);
-                $statement->execute();
-            }
+            // if ($action =="insert")
+            // { 
+            //     $statement = $db->prepare('INSERT INTO document (owner_id, document_name, document_content) Values (1, :document, 'jadsjdas')'); 
+            //     $statement->bindValue(':document', $document, PDO::PARAM_STR);
+            //     $statement->execute();
+            // }
 
         } catch (Exception $ex) {
             echo "$ex";
