@@ -19,9 +19,7 @@
             <option value="insert">Insert</option>
         </select>
         
-        <div id="content">
-            Document Content:<textarea id="document_content" name="document_content">
-        </div>
+        
 
         <input type="submit" value="Perform requested action" name="show_document">
 	</form>
