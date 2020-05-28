@@ -15,7 +15,7 @@ CREATE TABLE document (
     id SERIAL PRIMARY KEY,
     owner_id INT NOT NULL REFERENCES document_owner(id),
     document_name VARCHAR(256) NOT NULL UNIQUE,
-    requested_action VARCHAR(256) NOT NULL
+    document_content VARCHAR(256) NOT NULL
 );
 
 --initial values
@@ -23,6 +23,6 @@ CREATE TABLE document (
 INSERT INTO document_owner (first_name, last_name) VALUES ('John', 'Doe');
 INSERT INTO document_owner (first_name, last_name) VALUES ('Jamongus', 'Badongus');
 
-INSERT INTO document (owner_id, document_name, requested_action) VALUES (1, 'Musings of the sole', 'copy');
-INSERT INTO document (owner_id, document_name, requested_action) VALUES (2, 'To do list', 'delete');
-INSERT INTO document (owner_id, document_name, requested_action) VALUES (2, 'My outlook on life', 'copy');
+INSERT INTO document (owner_id, document_name, requested_action) VALUES (1, 'Musings of the sole', 'To be or not to be?');
+INSERT INTO document (owner_id, document_name, requested_action) VALUES (2, 'To do list', 'I should really finish this assignment');
+INSERT INTO document (owner_id, document_name, requested_action) VALUES (2, 'My outlook on life', 'This life is the time to prepare to meet God');

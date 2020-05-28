@@ -8,10 +8,17 @@
 </head>
 <body>
     <form method="POST"> 
-		First Name<input type="text" id="first_name" name="first_name"><br /><br />
-		Last Name<input type="text" id="last_name" name="last_name"><br /><br />	
 		Document Name<input type="text" id="document" name="document"><br /><br />
-		<input type="submit" value="Show the document" name="show_document">
+
+        <label for="action">Choose an Action:</label>
+
+        <select name="action" id="action">
+            <option value="display">Display</option>
+            <option value="delete">Delete</option>
+            <option value="insert">Insert</option>
+        </select>
+		
+        <input type="submit" value="Perform requested action" name="show_document">
 	</form>
 <?php
     if(isset($_POST['document']))
@@ -19,6 +26,12 @@
         $document = $_POST["document"];
         // $document += "%";
     }
+    
+    if(isset($_POST['action']))
+	{
+        $document = $_POST["action"];
+    }
+    
     require "db_connect.php";
     $db = get_db();
 
