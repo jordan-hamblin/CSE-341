@@ -30,7 +30,6 @@
     if(isset($_POST['document']))
 	{
         $document = $_POST["document"];
-        // $document += "%";
     }
     
     if(isset($_POST['action']))
@@ -38,6 +37,11 @@
         $action = $_POST["action"];
     }   
     
+    if(isset($_POST['document_content']))
+	{
+        $document_content = $_POST["document_content"];
+    }  
+
     require "db_connect.php";
     $db = get_db();
 
@@ -64,12 +68,13 @@
                 echo "</p>";
             }
             
-            // if ($action =="insert")
-            // { 
-            //     $statement = $db->prepare('INSERT INTO document (owner_id, document_name, document_content) Values (1, :document, 'jadsjdas')'); 
-            //     $statement->bindValue(':document', $document, PDO::PARAM_STR);
-            //     $statement->execute();
-            // }
+            if ($action =="insert")
+            { 
+                $statement = $db->prepare('INSERT INTO document (owner_id, document_name, document_content) Values (1, :document, :document_content'); 
+                $statement->bindValue(':document', $document, PDO::PARAM_STR);
+                $statement->bindValue(':document_content', $document_content, PDO::PARAM_STR);
+                $statement->execute();
+            }
 
         } catch (Exception $ex) {
             echo "$ex";
