@@ -40,7 +40,6 @@
     if(isset($_POST['document_content']))
 	{
         $document_content = $_POST["document_content"];
-        echo "$document_content";
     }  
 
     require "db_connect.php";
@@ -74,6 +73,7 @@
                 $statement = $db->prepare('INSERT INTO document (owner_id, document_name, document_content) Values (1, :document, :document_content'); 
                 $statement->bindValue(':document', $document, PDO::PARAM_STR);
                 $statement->bindValue(':document_content', $document_content, PDO::PARAM_STR);
+                echo $statement;
                 $statement->execute();
                 echo "<p>";
                 echo "Document inserted";
