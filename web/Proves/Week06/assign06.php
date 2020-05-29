@@ -8,6 +8,12 @@
     <title>Document</title>
 </head>
 <body>
+<header>
+        <ul>
+            <li><a href="../homepage.php">Homepage</a></li>
+            <li><a href="../index.html">Assignments</a></li>
+        </ul>
+    </header>
     <form method="POST"> 
 		Document Name<input type="text" id="document" name="document"><br />
 
