@@ -40,6 +40,7 @@
     if(isset($_POST['document_content']))
 	{
         $document_content = $_POST["document_content"];
+        echo "$document_content";
     }  
 
     require "db_connect.php";
@@ -74,11 +75,14 @@
                 $statement->bindValue(':document', $document, PDO::PARAM_STR);
                 $statement->bindValue(':document_content', $document_content, PDO::PARAM_STR);
                 $statement->execute();
+                echo "<p>";
+                echo "Document inserted";
+                echo "</p>";
             }
 
         } catch (Exception $ex) {
             echo "$ex";
         }
-?>
+    ?>
 </body>
 </html>
