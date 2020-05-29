@@ -70,7 +70,7 @@
             
             if ($action =="insert")
             { 
-                $statement = $db->prepare("INSERT INTO document (owner_id, document_name, document_content) VALUES (1, 'Business Card', 'ffkndfdfpdfpfNPIFA'");                    
+                $statement = $db->prepare("INSERT INTO document (owner_id, document_name, document_content) VALUES (1, 'Business Card', 'ffkndfdfpdfpfNPIFA')");                    
                 // $statement->bindValue(':document', $document, PDO::PARAM_STR);
                 // $statement->bindValue(':document_content', $document_content, PDO::PARAM_STR);
                 $statement->execute();
