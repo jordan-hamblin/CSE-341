@@ -14,6 +14,9 @@
             <li><a href="../index.html">Assignments</a></li>
         </ul>
     </header>
+    <br><br>
+    <h1>Online Document Storage</h1>
+    <br><br>
     <form method="POST"> 
 		Document Name<input type="text" id="document" name="document"><br />
 
